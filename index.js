@@ -34,9 +34,44 @@
 
 // Now make ADD ITEM bold and chage the font color to greeen
 
-var ad=document.getElementById("title");
+/*var ad=document.getElementById("title");
 ad.style.fontVariant ="small-caps";
-ad.style.color="green";
+ad.style.color="green";*/
+//GETELEMENTBYCLASSNAME
+
+// var items =document.getElementsByClassName("list-group-item");
+// console.log(items);
+// console.log(items[1]);
+// items[1].textContent="hello 2";
+// items[1].style.fontWeight = "bold";
+// items[1].style.backgroundColor="yellow";
+// // items.style.backgroundColor="#f4f4f4";  //gives error
+// for (var i=0; i< items.length;i++){
+//     items[i].style.backgroundColor ="pink";
+// };
+
+//  get elementby tag nanme
+// var li =document.getElementsByTagName("li");
+// console.log(li);
+// console.log(li[1]);
+// li[1].textContent="hello 2";
+// li[1].style.fontWeight = "bold";
+// li[1].style.backgroundColor="yellow";
+// // items.style.backgroundColor="#f4f4f4";  //gives error
+// for (var i=0; i< li.length;i++){
+//     li[i].style.backgroundColor ="pink";
+// };
+
+
+/*Make the 3 rd element in the list have green background color
+Make all the elements in the list have bold color font*/
+var items =document.getElementsByClassName("list-group-item");
+items[2].style.fontWeight = "bold";
+for (var i=0; i< items.length;i++){
+      items[2].style.backgroundColor ="green";
+    };
+
+
 
 
 
