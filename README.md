@@ -1,7 +1,11 @@
 # Sharpener
-For Work
-1.Make the 3 rd element in the list have green background color
-2.Make all the elements in the list have bold color font
+
+Make the 2nd item have green background color
+Make the 3rd item invisible.
+
+
+Using QuerySelectorALL change the font color to green for 2nd item in the item list
+Choose all the odd elements and make their background green using QuerySelectorALL﻿
 
 
 
