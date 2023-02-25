@@ -1,7 +1,6 @@
 
 var form = document.getElementById("addForm");
 var itemList = document.getElementById("items");
-
 //FROM SUBMIT EVENT add
 
 form.addEventListener("submit", addItem);
@@ -11,12 +10,16 @@ function addItem(e) {
     e.preventDefault();
     //get input value
     var newIteam = document.getElementById("item").value;
+    var description = document.getElementById("description").value;
     // create li element
     var li = document.createElement("li");
     // add class
     li.className = "list-group-item";
     //    add text node with input value
-    li.appendChild(document.createTextNode(newIteam));
+    li.appendChild(document.createTextNode(newIteam)) ;
+     li.appendChild(document.createTextNode(description));
+    // li.appendChild(document.createTextNode);
+
     // create delete button element
     var buttonBtn = document.createElement("button");
 
@@ -50,4 +53,33 @@ function removeItem(e) {
             itemList.removeChild(li);
         }
     }
+};
+
+
+
+
+
+// // filter event 
+var filter = document.getElementById("filter");
+filter.addEventListener("keyup", filterItems);
+
+function filterItems(e) {
+    // converts text to lowercase
+    var text = e.target.value.toLowerCase();
+    var items = itemList.getElementsByTagName("li");
+    //  convert to an array
+    Array.from(items).forEach(function (item) {
+        var itemName = item.firstChild.textContent;
+       var description=item.childNodes[1].textContent;
+        if (itemName.toLowerCase().indexOf(text) != -1 ||description.toLowerCase().indexOf(text) != -1 ) {
+            item.style.display = "block";
+
+        } else {
+            item.style.display = "none"
+        }
+
+    }
+    );
+
+
 };
