@@ -1,6 +1,6 @@
 # Sharpener
 
-Lets store the users in the right format
+Lets-Scale-the-app-to-more-users
 
 
 

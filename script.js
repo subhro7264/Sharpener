@@ -1,25 +1,29 @@
 
-var from=document.getElementById("form-head");
+var from = document.getElementById("form-head");
 
-from.addEventListener("submit" ,saveLocalStroage);
+from.addEventListener("submit", saveLocalStroage);
 
-function saveLocalStroage(e){
+function saveLocalStroage(e) {
     e.preventDefault();
-     
-    const obj={
-    name:e.target.fullname.value,
-     email:e.target.emailId.value,
-     phoneNumber:e.target.PhoneNumber.value,
-     dateToCall:e.target.date_to_call.value,
-    };
+    const name = e.target.fullname.value;
+    const phone = e.target.number.value;
+    const email = e.target.emailId.value;
+    const dateToCall = e.target.date_to_call.value;
+    const obj = {
+        name,
+        email,
+        phone,
+        dateToCall
+    }
+    localStorage.setItem(obj.name, JSON.stringify(obj))
+    showOnTheScreen(obj)
 
+}
 
-    let obj_serialized=JSON.stringify(obj);
-    localStorage.setItem("obj" , obj_serialized)
-    // localStorage.setItem("name", name);
-    // localStorage.setItem("email", email);
-    // localStorage.setItem("phoneNumber", phoneNumber);
-    // localStorage.setItem("date", dateToCall);
-    
-    
+function showOnTheScreen(obj) {
+    const parantElement = document.getElementById("listOfItem");
+    const childElement = document.createElement("li");
+    childElement.textContent = childElement.textContent + `${obj.name } - ${obj.email}-${obj.Phone}${obj.dateToCall}`;
+    parantElement.appendChild(childElement);
+
 };
