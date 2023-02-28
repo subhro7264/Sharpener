@@ -79,8 +79,22 @@ function showOnTheScreen(obj) {
    deleteBtn.onclick=()=>{
     localStorage.removeItem(obj.name)
     parantElm.removeChild(childElm)
-   }
+   };
+   const editBtn = document.createElement("input");
+    editBtn.type="button"
+    editBtn.value="Edit"
+    editBtn.onclick=()=>{
+        localStorage.removeItem(obj.name)
+        parantElm.removeChild(childElm)
+        document.getElementById("nameInputTag").value=obj.name
+        document.getElementById("emailInputTag").value=obj.email
+        document.getElementById("numberlInputTag").value=obj.number
+        document.getElementById("datelInputTag").value=obj.dateToCall
+        
+       };
+
     childElm.appendChild(deleteBtn);
+    childElm.appendChild(editBtn);
     parantElm.appendChild(childElm);
 }
  
