@@ -54,17 +54,18 @@ from.addEventListener("submit", saveLocalStroage);
 
 function saveLocalStroage(e) {
     e.preventDefault();
-    const name = e.target.fullname.value;
-    const phone = e.target.number.value;
-    const email = e.target.emailId.value;
-    const dateToCall = e.target.date_to_call.value;
+    const expend = e.target.Expend_Amount.value;
+    const discription = e.target.Discription.value;
+    const category = e.target.Category.value;
+    
     const obj = {
-        name,
-        email,
-        phone,
-        dateToCall
+        expend,
+        discription,
+        category,
+
+     
     }
-    localStorage.setItem(obj.name, JSON.stringify(obj))
+    localStorage.setItem(obj.expend, JSON.stringify(obj))
     showOnTheScreen(obj);
 
 }

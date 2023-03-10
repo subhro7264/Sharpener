@@ -1,7 +1,4 @@
 # Sharpener
-
-<!-- By mistake you have added thw wrong email id.  -->
-
-<!-- Lets edit and fix it. -->
+<!-- Making-an-Expense-tracker-app-with-local-storage-integrationMaking-an-Expense-tracker-app-with-local-storage-integration -->
 
 

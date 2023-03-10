@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking appointment</title>
+    <title>Expense tracker</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,40 +14,40 @@
     <div class="outter-box">
         <div class="inner-box">
             <header class="singup-header">
-                <h1>Book a Call</h1>
-                <p>Book a call slot and represenntative will call you within 1hr of selected time</p>
+                <h1>Expense Tracker</h1>
+                <p>Track your Expense Here</p>
             </header>
             <hr>
             <main class="singup-body">
                 <form id="form-head" >
                     <p>
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="fullname" placeholder="Enter Your Full Name" required>
+                        <label for="number">Choose Expend Amount</label>
+                        <input type="number" id="number" name="Expend_Amount" placeholder="Enter Your Expend Amount" required>
                         <br>
                     </p>
 
 
                     <p>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="emailId" placeholder="Enter Your Email Id " required>
+                        <label for="Discription">Choose Discription</label>
+                        <input type="text" id="Discription" name="Discription" placeholder="Enter Your Discription " required>
                         <br>
                     </p>
                     <p>
-
-                        <label for="number">Phone Number</label>
-                        <input type="tel" id="number" name="number" placeholder="Enter Your Phone Number" required>
-                        <br>
+                      
+                        <label for="Category">Chose a Category</label>
+                        <select name="Category" id="Category">
+                            <option value="Movi">Movi</option>
+                            <option value="Food">Food</option>
+                            <option value="Gym">Gym</option>
+                            <option value="Medic">Medic</option>
+                        </select>
+                       
                     </p>
 
-                    <p>
-                        <label for="date">Date to Call</label>
-                        <input type="datetime-local" id="date" name="date_to_call" required>
-                        <br>
-
-                    </p>
+                   
                     <p>
 
-                        <input type="submit" id="submit" value="Get a Call">
+                        <input type="submit" id="submit" value="ADD EXPENCE">
 
 
                     </p>
